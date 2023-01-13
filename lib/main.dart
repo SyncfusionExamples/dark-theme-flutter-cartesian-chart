@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
-import 'package:syncfusion_flutter_core/core.dart';
 
 void main() {
-  // Register your license here
-  SyncfusionLicense.registerLicense(null);
   return runApp(DarkThemeChart());
-  }
+}
 
 class DarkThemeChart extends StatelessWidget {
   @override
@@ -15,7 +12,7 @@ class DarkThemeChart extends StatelessWidget {
       title: 'Chart in Dark Theme',
       theme: ThemeData(
         brightness: Brightness.dark,
-        primarySwatch: Colors.blue,   
+        primarySwatch: Colors.blue,
       ),
       home: MyHomePage(),
     );
@@ -38,11 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body: SfCartesianChart(
             primaryXAxis: CategoryAxis(),
-            primaryYAxis: NumericAxis(
-              minimum: 3,
-              maximum: 12,
-              interval: 2
-            ),
+            primaryYAxis: NumericAxis(minimum: 3, maximum: 12, interval: 2),
             // Chart title
             title: ChartTitle(text: 'Analysis of Share Market'),
             // Enable legend
